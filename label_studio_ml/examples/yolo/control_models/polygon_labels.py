@@ -23,7 +23,7 @@ class PolygonLabelsModel(ControlModel):
         return control.tag == cls.type
 
     def predict_regions(self, path) -> List[Dict]:
-        results = self.model.predict(path)
+        results = self.model.predict(path, conf=self.model_score_threshold)
         return self.create_polygons(results, path)
 
     def create_polygons(self, results, path):
