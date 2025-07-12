@@ -13,7 +13,7 @@ class PolygonLabelsModel(ControlModel):
     """
 
     type = "PolygonLabels"
-    model_path = "21_bestv11.pt"
+    model_path = "best.pt"
 
     @classmethod
     def is_control_matched(cls, control) -> bool:
